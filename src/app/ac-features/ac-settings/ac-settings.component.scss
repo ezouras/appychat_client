@@ -1,0 +1,72 @@
+@import 'variables';
+
+.ac-settings-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.5rem;
+  font-size: 1rem;
+  background: #fdfd96;
+  font-family: $fancy_font;
+}
+
+.ac-settings-block {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  font-family: $fancy_font;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid $med_grey;
+
+  .sub-text {
+    font-size: 0.5rem;
+    color: $med_grey;
+  }
+
+  .normal-text {
+    font: 1rem;
+    color: $midnight_blue;
+  }
+
+  .line {
+    border-bottom: 2px solid $med_grey;
+  }
+}
+
+.sign-in-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+
+  .sign-in-button {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    color: darken($fashion_fuchsia, 10%);
+
+    .sign-in-cursive {
+      font-family: $cursive_font;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .sign-in-link {
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .sign-in-link:hover {
+      color: $fashion_fuchsia;
+    }
+  }
+}
+
+.ac-settings-block:hover {
+  color: darken($med_grey, 15%);
+}
+
+.ac-settings-mainbody {
+  background: lighten($poppy_blue, 47%);
+  height: 100vh;
+}

@@ -1,0 +1,16 @@
+@import 'variables';
+
+footer {
+  background: $poppy_blue;
+  color: white;
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .footer-title {
+      padding: 1rem;
+    }
+  }
+}

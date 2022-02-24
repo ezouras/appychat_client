@@ -1,0 +1,44 @@
+@import "variables";
+
+.ac-friend-list-wrapper {
+  background: lighten($poppy_blue, 48%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  .ac-friend-list-search {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    .ac-friend-input-search {
+      border: none;
+      border-radius: 15px;
+      width: 100%;
+      padding: 0.25rem;
+      outline: none;
+      margin-top: 0.1rem;
+    }
+  }
+
+  .ac-friend-list {
+    height: 100%;
+    overflow: auto;
+  }
+}
+
+:host {
+  .friend-selection {
+    ::ng-deep .person-card-wrapper {
+      background: $midnight_blue!important;
+      color: white;
+
+      .person-card-title {
+        color: $poppy_yellow;
+      }
+    }
+  }
+}

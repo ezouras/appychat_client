@@ -1,0 +1,21 @@
+@import 'variables';
+
+main {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+
+  app-ac-friends {
+    width: 25%;
+  }
+
+  app-ac-friend-chat {
+    width: 50%;
+  }
+
+  app-ac-friend-details {
+    width: 25%;
+  }
+}

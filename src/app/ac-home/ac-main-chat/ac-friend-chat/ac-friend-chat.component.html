@@ -1,0 +1,34 @@
+<div class="acf-chat-container">
+  <div class="acf-chat-header">
+    <div class="acf-chat-header-friend-info">
+      <div class="acf-chat-header-pic">
+        <img class="friend-img" [src]="friendPicSrc">
+      </div>
+      <div class="acf-chat-header-firstname">
+        {{friend.first_name}} {{friend.last_name}}
+      </div>
+    </div>
+    <div class="acf-chat-header-friend-icons">
+      <div class="mat-icon-box">
+        <div class="material-icons">zoom_in</div>
+      </div>
+      <div class="mat-icon-box">
+        <div class="material-icons">favorite</div>
+      </div>
+      <div class="mat-icon-box">
+        <div class="material-icons">notifications</div>
+      </div>
+    </div>
+  </div>
+  <div class="acf-main-chat" #chatScroll>
+    <div *ngFor="let message of messages" class="message-bubble message-bubble-from-you message-bubble-right">
+      {{message}}
+    </div>
+  </div>
+  <div class="acf-chat-input">
+    <form class="ac-friend-list-search" [formGroup]="searchForm">
+      <input formControlName="searchInput" class="ac-friend-input-search" placeholder="Search friend.." type="text">
+    </form>
+    <button (click)="sendMsg(chatScroll)">Send Message</button>
+  </div>
+</div>

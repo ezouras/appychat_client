@@ -1,0 +1,59 @@
+@import 'variables';
+
+%title {
+  /* for titles */
+  color: $midnight_blue;
+  font-size: $title_font;
+  line-height: $title_line_height;
+}
+
+%subtitle {
+  /* for subtitles */
+  color: $dark_grey;
+  font-weight: bold;
+  font-size: $subtitle_font;
+  line-height: 20px;
+}
+
+%card {
+  display: flex;
+  width: 100%;
+  color: $dark_grey;
+  font-size: $fnt_sm;
+  background: $light_grey_back;
+  box-shadow: $shadow;
+  border-radius: 25px;
+  margin: 1rem 1rem 1rem 0;
+  overflow: hidden;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+%card:hover {
+  background: $powder_blue;
+}
+
+%panel1 {
+  padding: 1rem;
+  font-size: 0.75rem;
+  line-height: 140%;
+  width: 100%;
+  color: $midnight_blue;
+  background: $light_blue;
+  box-shadow: $shadow;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+%panel2 {
+  padding: 1rem;
+  font-size: $m_fnt_sz;
+  line-height: 140%;
+  width: 100%;
+  color: #57585A;
+  background: $light_grey_back;
+  box-shadow: $shadow;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}

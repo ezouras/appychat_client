@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'material-icons/iconfont/material-icons.css';
+@import 'variables';
+@import "animations";
+@import 'components';
+/*
+font-family: 'Comfortaa', cursive;
+font-family: 'Lato', sans-serif;
+*/
+body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  background: lighten($poppy_blue, 48%);
+  color: $dark_grey;
+  font-style: $m_fnt;
+  font-weight: normal;
+  font-size: $m_fnt_sz;
+  line-height: $m_ln_ht;
+  height: 100vh;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

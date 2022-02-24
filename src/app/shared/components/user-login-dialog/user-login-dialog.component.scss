@@ -1,0 +1,90 @@
+@import 'variables';
+
+::ng-deep .mat-dialog-container {
+  background: $poppy_blue;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: -1.25em;
+}
+
+::ng-deep .mat-dialog-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+::ng-deep .mat-hint {
+  display: none;
+}
+
+::ng-deep .mat-select-value {
+  color: $light_grey_back;
+}
+
+::ng-deep .mat-form-field-label {
+  color: $poppy_yellow;
+}
+/*::ng-deep .mat-focused .mat-form-field-label {
+  color: red;
+}*/
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: $light_grey_back;
+}
+
+::ng-deep .mat-form-field-underline {
+  /*change color of underline*/
+  background-color: $poppy_yellow;
+}
+
+::ng-deep .mat-select-arrow {
+  color: $poppy_yellow;
+}
+
+::ng-deep .mat-form-field-label:focus {
+  color: $light_grey_back;
+}
+/* Change label color on focused */
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: $light_grey_back;
+}
+/* underline border color on focused */
+::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple {
+  background-color: $light_grey_back;
+}
+
+::ng-deep input.mat-input-element {
+  color: $lavender_back;
+  font: $fancy_font;
+}
+
+.dialog-button {
+  font-size: 0.75rem;
+  border: 1px solid $poppy_yellow;
+  background: $light_grey_back;
+  color: $dark_grey;
+  border-radius: 15px;
+  width: 4rem;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.dialog-button:hover {
+  color: white;
+  background: $dark_grey;
+}
+
+p {
+  color: $poppy_yellow;
+}
+
+.dialog-title-wrapper {
+  display: flex;
+  align-items: baseline;
+}
+
+.gusto {
+  color: $poppy_yellow;
+  font-size: 1.5rem;
+  margin-left: 0.25rem;
+  transform: rotate(10deg);
+}

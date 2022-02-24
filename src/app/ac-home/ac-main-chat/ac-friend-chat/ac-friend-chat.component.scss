@@ -1,0 +1,137 @@
+@import 'variables';
+
+.acf-chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+
+  .acf-chat-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem 0;
+    border-bottom: 1px solid lightgrey;
+
+    .acf-chat-header-friend-info {
+      display: flex;
+      align-items: center;
+
+      .acf-chat-header-pic {
+        margin-right: 0.25rem;
+
+        .friend-img {
+          border-radius: 50%;
+          width: 1.5rem;
+        }
+      }
+    }
+
+    .acf-chat-header-friend-icons {
+      display: flex;
+      color: lightgrey;
+      transition: all 0.5s;
+
+      .mat-icon-box:hover {
+        cursor: pointer;
+        color: darken(lightgrey,30%);
+      }
+    }
+  }
+
+  .acf-main-chat {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem;
+    overflow: scroll;
+
+    .message-bubble {
+      position: relative;
+      border-radius: 40px;
+      padding: 0.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .message-bubble-from-you {
+      background: $bubble_grey;
+      color: $med_grey;
+      margin-right: 3rem;
+    }
+
+    .message-bubble-from-me {
+      background: $poppy_blue;
+      color: white;
+      margin-left: 3rem;
+    }
+
+    .message-bubble-from-you:before {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      border-left: 12px solid $bubble_grey;
+      border-right: 6px solid transparent;
+      border-top: 6px solid $bubble_grey;
+      border-bottom: 20px solid transparent;
+      left: 22px;
+      bottom: -10px;
+    }
+
+    .message-bubble-from-me:after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      border-left: 6px solid transparent;
+      border-right: 26px solid $poppy_blue;
+      border-top: 6px solid $poppy_blue;
+      border-bottom: 20px solid transparent;
+      right: 22px;
+      bottom: -10px;
+    }
+  }
+
+  .acf-chat-input {
+    display: flex;
+
+    .ac-friend-list-search {
+      input {
+        height: 100%;
+        border: none;
+        border-top: 1px solid lightgrey;
+        border-left: 1px solid lightgrey;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      input:active {
+        outline: none;
+      }
+    }
+
+    button {
+      border: 1px solid lightgrey;
+      border-left: none;
+      color: $med_grey;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    button:hover {
+      color: $dark_grey;
+      cursor: pointer;
+    }
+
+    button:active {
+      color: white;
+      background: $med_grey;
+      transform: scale(0.98);
+      box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import 'variables';
+
+header {
+  background: $poppy_blue;
+  padding-left: $main-padding-left;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .userSettings {
+    cursor: pointer;
+  }
+
+  .acLogo {
+    padding-right: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .pop {
+      color: $poppy_yellow;
+      font-size: 3rem;
+      transform: rotate(5deg);
+      margin-left: 0.5rem;
+    }
+  }
+}

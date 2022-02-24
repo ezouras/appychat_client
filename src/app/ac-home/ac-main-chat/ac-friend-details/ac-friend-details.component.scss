@@ -1,0 +1,144 @@
+@import 'variables';
+
+.ac-selectedfriend-details-wrapper {
+  height: 100%;
+  overflow: auto;
+
+  .ac-selectedfriend-mainbock {
+    padding: 1rem;
+  }
+
+  .ac-selectedfriend-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      border: 1px solid $med_grey;
+      border-radius: 50%;
+    }
+  }
+
+  .full-name-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+
+    .title {
+      font-size: 0.75rem;
+      padding-top: 0.25rem;
+    }
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: space-around;
+
+    .mat-icon-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      padding: 0.5rem;
+      font-size: 0.5rem;
+      background: $lavender_back;
+      color: $poppy_blue;
+      border-radius: 50%;
+      transition: all 0.35s ease;
+    }
+
+    .mat-icon-box:hover {
+      cursor: pointer;
+      background-color: $poppy_blue;
+      color: $lavender_back;
+    }
+  }
+
+  .vf-line-actions {
+    display: flex;
+    flex-direction: column;
+    color: $med_grey;
+
+    .vf-line-actions-row {
+      display: flex;
+      align-items: center;
+
+      .vf-line-actions-icon {
+        padding-left: 1rem;
+      }
+
+      .vf-line-actions-text {
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  .vf-line-actions-row :hover {
+    color: lighten($med_grey, 20%);
+    cursor: pointer;
+  }
+
+  .vf-line-actions > div:first-child {
+    padding-bottom: 0.25rem;
+  }
+
+  .vf-attachment {
+    display: flex;
+    flex-direction: column;
+
+    .vf-attachment-block {
+      padding: 0.75rem;
+    }
+
+    .vf-attachment-text {
+      font-weight: bold;
+    }
+
+    .vf-attachment-type-btn-container {
+      display: flex;
+      justify-content: space-between;
+
+      .vf-attachment-type-btn {
+        background-color: $lavender_back;
+        color: $poppy_blue;
+        margin: 0.25rem;
+        border-radius: 15px;
+        padding: 0.5rem;
+        font-size: 0.5rem;
+      }
+
+      .vf-attachment-type-btn:hover {
+        cursor: pointer;
+        background-color: $poppy_blue;
+        color: $lavender_back;
+      }
+    }
+
+    .vf-view-all-btn-container {
+      display: flex;
+      justify-content: space-evenly;
+
+      .vf-view-all-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.15rem;
+        width: 30%;
+        background: white;
+        color: $poppy_blue;
+        border: 1px solid $poppy_blue;
+        border-radius: 15px;
+        font-size: 0.5rem;
+      }
+
+      .vf-view-all-btn:hover {
+        cursor: pointer;
+        color: white;
+        background: $poppy_blue;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import 'variables';
+
+.introWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: white;
+
+  .acLogo {
+    background: $poppy_blue;
+    border: 3px solid $poppy_yellow;
+    font-size: x-large;
+    color: white;
+    font-family: $fancy_font;
+    font-style: bold;
+    padding: 1.25rem;
+    border-radius: 50%;
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+}

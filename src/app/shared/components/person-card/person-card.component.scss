@@ -1,0 +1,33 @@
+@import 'components';
+
+.person-card-wrapper {
+  @extend %card;
+}
+
+.person-picture-container {
+  width: 20%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.75rem;
+
+  .person-img {
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+
+.person-details {
+  width: 30%;
+}
+
+.person-activity {
+  width: 30%;
+}
+
+.person-card-title {
+  color: $poppy_blue;
+  font-size: 0.75rem;
+  padding-bottom: 0.25rem;
+}

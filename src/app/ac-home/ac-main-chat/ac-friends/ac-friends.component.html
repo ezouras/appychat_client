@@ -1,0 +1,10 @@
+<div class="ac-friend-list-wrapper">
+  <form class="ac-friend-list-search" [formGroup]="searchForm">
+    <input formControlName="searchInput" class="ac-friend-input-search" placeholder="Search friend.." type="text">
+  </form>
+  <div class=" ac-friend-list">
+    <div *ngFor="let friend of friends" (click)="friendSelected(friend)">
+      <app-person-card [friend]='friend' [ngClass]="{'friend-selection': friend.isSelected}"></app-person-card>
+    </div>
+  </div>
+</div>

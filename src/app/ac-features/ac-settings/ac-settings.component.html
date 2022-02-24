@@ -1,0 +1,46 @@
+<div class="acs-settings-wrapper">
+  <app-ac-header></app-ac-header>
+  <div class="ac-settings-mainbody">
+    <div *ngIf="userSet; else noUserTemplate">
+      <div class="ac-settings-title">User Settings</div>
+      <div class="ac-settings-block">
+        <div class='sub-text'>First Name</div>
+        <div class='normal-text'>{{user.first_name}}</div>
+
+      </div>
+      <div class="ac-settings-block">
+        <div class='sub-text'>Last Name</div>
+        <div class='normal-text'>{{user.last_name}}</div>
+        <hr />
+      </div>
+      <div class="ac-settings-block">
+        <div class='sub-text'>Email</div>
+        <div class='normal-text'>evie.zouras@gmail.com</div>
+        <hr />
+      </div>
+      <div class="ac-settings-block">
+        <div class='sub-text'>Title</div>
+        <div class='normal-text'>Senior Frontend Developer</div>
+        <hr />
+      </div>
+      <div class="ac-settings-block">
+        <div class='sub-text'>Favorite Color</div>
+        <div class='normal-text'>{{user.favorite_color}}</div>
+        <hr />
+      </div>
+      <div class="ac-settings-block">
+        <div class='sub-text'>Category</div>
+        <div class='normal-text'>{{user.category}}</div>
+        <hr />
+      </div>
+    </div>
+  </div>
+  <ng-template class="noUsertemplate" #noUserTemplate>
+    <div class=sign-in-container>
+      <div class="sign-in-button">
+        <div class='sign-in-cursive'>please</div>
+        <div class='sign-in-link' (click)="signIn()">Sign In </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

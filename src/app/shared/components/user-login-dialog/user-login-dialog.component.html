@@ -1,0 +1,45 @@
+<div class="dialog-wrapper">
+  <div class="dialog-title-wrapper">
+    <div mat-dialog-title>Welcome</div>
+    <div class="gusto">!</div>
+    <div>
+      Sign in
+    </div>
+  </div>
+  <div mat-dialog-content>
+    <mat-form-field appearance="fill">
+      <mat-label>First Name</mat-label>
+      <input name="blah" autocomplete="off" matInput [(ngModel)]="data.first_name">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-content>
+    <mat-form-field appearance="fill">
+      <mat-label>Last Name</mat-label>
+      <input name="blah" autocomplete="off" matInput [(ngModel)]="data.last_name">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-content>
+    <mat-form-field appearance="fill">
+      <mat-label>Favorite Color</mat-label>
+      <mat-select [(ngModel)]="data.favorite_color" name="Color" ngDefaultControl>
+        <mat-option *ngFor="let color of colors" [value]="color">
+          {{color}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-content>
+    <mat-form-field appearance="fill">
+      <mat-label>Category</mat-label>
+      <mat-select [(ngModel)]="data.category" name="dataCategory" ngDefaultControl>
+        <mat-option *ngFor="let category of categories" [value]="category">
+          {{category}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="action-buttons" mat-dialog-actions>
+    <button mat-button class="dialog-button" (click)="onNoClick()">No Thanks</button>
+    <button class="dialog-button" mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+  </div>
+</div>
