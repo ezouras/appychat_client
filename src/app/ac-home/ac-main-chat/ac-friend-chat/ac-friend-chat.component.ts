@@ -75,22 +75,23 @@ export class AcFriendChatComponent implements OnInit {
         isYou: true
       };
       this.messages.push(chatMessage)
-      console.log("length is ", msg.message.length)
-      console.log('msg is ', msg.message)
-      this.chatBubbleLength.push(this.getBubbleLength(msg.message.split(" ").length));
-      //this.chatBubbleLength.push(msg.message.length + 50);
-      console.log('array is ', this.chatBubbleLength)
-
+      this.addBubbleChatLength(msg.message);
     });
   }
 
-  getBubbleLength(numbeOfWords: number): number {
-    return numbeOfWords * 50;
+
+  addBubbleChatLength(chatString: string) {
+    const numberOfWords = chatString.split(" ").length;
+    const stringLength = chatString.length;
+    const bubbleChatLength = numberOfWords * 20 + (stringLength + 100);
+    console.log('bubble length is ', bubbleChatLength)
+    this.chatBubbleLength.push(bubbleChatLength);
   }
 
-  userSentMessage(el: ElementRef) {
+  userSendingMessage(el: ElementRef) {
     this.sendMessageToServer();
     this.setHTMLElements(el)
+    this.addBubbleChatLength(this.messageString);
   }
 
   sendMessageToServer() {
@@ -105,10 +106,8 @@ export class AcFriendChatComponent implements OnInit {
     this.chatService.messages.next(this.messagePackage);
   }
 
-  setHTMLElements(el: ElementRef): void {
+  setHTMLElements(el: ElementRef, ): void {
     const contentHeight = this.chatScroll.nativeElement.offsetHeight;
-    //this.chatBubbleLength.push(this.messageString.length + 55)
-    this.chatBubbleLength.push(this.getBubbleLength(this.messageString.split(" ").length));
     this.chatScroll.nativeElement.scroll({
       top: this.chatScroll.nativeElement.scrollHeight,
       behavior: 'smooth'
