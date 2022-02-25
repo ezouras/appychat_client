@@ -10,6 +10,10 @@ export interface Message {
   message: string;
 }
 
+export interface MessageString {
+
+}
+
 @Injectable()
 export class ChatService {
   public messages: Subject<Message>;

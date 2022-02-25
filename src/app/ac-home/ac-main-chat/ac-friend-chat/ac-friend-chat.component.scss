@@ -44,6 +44,7 @@
     height: 100%;
     padding: 1rem;
     overflow: scroll;
+    overflow-y: scroll;
 
     .message-bubble {
       position: relative;
@@ -96,7 +97,10 @@
     display: flex;
 
     .ac-friend-list-search {
+      width: 75%;
+
       input {
+        width: 100%;
         height: 100%;
         border: none;
         border-top: 1px solid lightgrey;
@@ -115,6 +119,7 @@
     }
 
     button {
+      width: 25%;
       border: 1px solid lightgrey;
       border-left: none;
       color: $med_grey;

@@ -21,8 +21,8 @@
     </div>
   </div>
   <div class="acf-main-chat" #chatScroll>
-    <div *ngFor="let message of messages" class="message-bubble message-bubble-from-you message-bubble-right">
-      {{message}}
+    <div [ngClass]="{'message-bubble-from-you' : chatMessage.isYou, 'message-bubble-from-me':!chatMessage.isYou}" *ngFor="let chatMessage of messages" class="message-bubble message-bubble-from-you message-bubble-right">
+      {{chatMessage.message}}
     </div>
   </div>
   <div class="acf-chat-input">
