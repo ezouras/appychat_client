@@ -21,7 +21,7 @@
     </div>
   </div>
   <div class="acf-main-chat" #chatScroll>
-    <div [ngClass]="{'message-bubble-from-you' : chatMessage.isYou, 'message-bubble-from-me':!chatMessage.isYou}" *ngFor="let chatMessage of messages" class="message-bubble message-bubble-from-you message-bubble-right">
+    <div [ngClass]="{'message-bubble-from-you' : chatMessage.isYou, 'message-bubble-from-me':!chatMessage.isYou}" *ngFor="let chatMessage of messages; let i =index;" class="message-bubble" [ngStyle]="{'width.px':chatBubbleLength[i]}">
       {{chatMessage.message}}
     </div>
   </div>
@@ -29,6 +29,6 @@
     <form class="ac-friend-list-search" [formGroup]="searchForm">
       <input formControlName="searchInput" class="ac-friend-input-search" placeholder="Search friend.." type="text">
     </form>
-    <button (click)="sendMsg(chatScroll)">Send Message</button>
+    <button (click)="userSentMessage(chatScroll)">Send Message</button>
   </div>
 </div>

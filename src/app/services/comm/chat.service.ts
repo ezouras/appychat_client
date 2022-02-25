@@ -10,9 +10,6 @@ export interface Message {
   message: string;
 }
 
-export interface MessageString {
-
-}
 
 @Injectable()
 export class ChatService {

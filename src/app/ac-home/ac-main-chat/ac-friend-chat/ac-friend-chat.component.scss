@@ -73,7 +73,7 @@
       position: absolute;
       border-left: 12px solid $bubble_grey;
       border-right: 6px solid transparent;
-      border-top: 6px solid $bubble_grey;
+      border-top: 1px solid $bubble_grey;
       border-bottom: 20px solid transparent;
       left: 22px;
       bottom: -10px;
@@ -86,7 +86,7 @@
       position: absolute;
       border-left: 6px solid transparent;
       border-right: 26px solid $poppy_blue;
-      border-top: 6px solid $poppy_blue;
+      border-top: 1px solid $poppy_blue;
       border-bottom: 20px solid transparent;
       right: 22px;
       bottom: -10px;

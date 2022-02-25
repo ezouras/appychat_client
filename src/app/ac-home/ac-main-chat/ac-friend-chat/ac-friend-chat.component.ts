@@ -31,6 +31,7 @@ export class AcFriendChatComponent implements OnInit {
     author: "unknown",
     message: ""
   };
+  chatBubbleLength: number[] = [];
 
 
   messages: ChatMessage[] = [];
@@ -48,11 +49,8 @@ export class AcFriendChatComponent implements OnInit {
         iif(() => value, this.chatService$, this.websocketState$)
       )
     ).subscribe((result: any) => {
-      console.log(result)
+      console.log('result from websocket connection is', result)
     });
-
-
-
 
     this.friendStateService.getSelectedFriend$().subscribe(
       (response) => {
@@ -77,14 +75,22 @@ export class AcFriendChatComponent implements OnInit {
         isYou: true
       };
       this.messages.push(chatMessage)
+      console.log("length is ", msg.message.length)
+      console.log('msg is ', msg.message)
+      this.chatBubbleLength.push(this.getBubbleLength(msg.message.split(" ").length));
+      //this.chatBubbleLength.push(msg.message.length + 50);
+      console.log('array is ', this.chatBubbleLength)
 
     });
-
   }
 
-  sendMsg(el: ElementRef) {
+  getBubbleLength(numbeOfWords: number): number {
+    return numbeOfWords * 50;
+  }
+
+  userSentMessage(el: ElementRef) {
     this.sendMessageToServer();
-    this.scrollToElement(el)
+    this.setHTMLElements(el)
   }
 
   sendMessageToServer() {
@@ -99,8 +105,10 @@ export class AcFriendChatComponent implements OnInit {
     this.chatService.messages.next(this.messagePackage);
   }
 
-  scrollToElement(el: ElementRef): void {
+  setHTMLElements(el: ElementRef): void {
     const contentHeight = this.chatScroll.nativeElement.offsetHeight;
+    //this.chatBubbleLength.push(this.messageString.length + 55)
+    this.chatBubbleLength.push(this.getBubbleLength(this.messageString.split(" ").length));
     this.chatScroll.nativeElement.scroll({
       top: this.chatScroll.nativeElement.scrollHeight,
       behavior: 'smooth'
